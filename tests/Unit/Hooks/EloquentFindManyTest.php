@@ -31,7 +31,7 @@ class EloquentFindManyTest extends TestCase
             ->shouldReceive('setMethod')
             ->with(
                 'findMany',
-                '\\' . Collection::class . '<\\' . get_class($model) . '>',
+                '\\' . Collection::class . '|' . (new \ReflectionClass($model))->getShortName(),
                 [
                     '$id',
                 ],

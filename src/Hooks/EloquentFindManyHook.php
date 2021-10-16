@@ -15,7 +15,7 @@ class EloquentFindManyHook implements ModelHookInterface
     {
         $command->setMethod(
             'findMany',
-            '\\' . Collection::class . '<\\' . get_class($model) . '>',
+            '\\' . Collection::class . '|' . (new \ReflectionClass($model))->getShortName(),
             [
                 '$id',
             ],
