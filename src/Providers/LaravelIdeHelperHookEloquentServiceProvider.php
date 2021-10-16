@@ -3,6 +3,7 @@
 namespace DanielDeWit\LaravelIdeHelperHookEloquent\Providers;
 
 use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindHook;
+use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindManyHook;
 use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindOrFailHook;
 use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindOrNewHook;
 use Illuminate\Contracts\Config\Repository as Config;
@@ -23,6 +24,7 @@ class LaravelIdeHelperHookEloquentServiceProvider extends ServiceProvider
             EloquentFindHook::class,
             EloquentFindOrFailHook::class,
             EloquentFindOrNewHook::class,
+            EloquentFindManyHook::class,
         ], $config->get('ide-helper.model_hooks', [])));
     }
 }

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DanielDeWit\LaravelIdeHelperHookEloquent\Tests\Unit\Providers;
 
 use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindHook;
+use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindManyHook;
 use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindOrFailHook;
 use DanielDeWit\LaravelIdeHelperHookEloquent\Hooks\EloquentFindOrNewHook;
 use DanielDeWit\LaravelIdeHelperHookEloquent\Providers\LaravelIdeHelperHookEloquentServiceProvider;
@@ -46,6 +47,7 @@ class LaravelIdeHelperHookEloquentServiceProviderTest extends TestCase
                 EloquentFindHook::class,
                 EloquentFindOrFailHook::class,
                 EloquentFindOrNewHook::class,
+                EloquentFindManyHook::class,
             ])
             ->getMock();
 
