@@ -1,0 +1,46 @@
+{
+    "name": "daniel-de-wit/laravel-ide-helper-hook-eloquent",
+    "type": "library",
+    "description": "A Laravel Package for adding eloquent methods support to Laravel IDE Helper",
+    "keywords": [
+        "laravel-ide-helper"
+    ],
+    "homepage": "https://github.com/daniel-de-wit/laravel-ide-helper-hook-eloquent",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel de Wit",
+            "email": "daniel@danieldewit.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "barryvdh/laravel-ide-helper": "^2.9.2",
+        "illuminate/database": "^6.9 || ^7.0 || ^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.7",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DanielDeWit\\LaravelIdeHelperHookEloquent\\Providers\\LaravelIdeHelperHookEloquentServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "DanielDeWit\\LaravelIdeHelperHookEloquent\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DanielDeWit\\LaravelIdeHelperHookEloquent\\Tests\\": "tests"
+        }
+    }
+}

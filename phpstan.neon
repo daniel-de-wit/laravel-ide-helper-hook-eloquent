@@ -1,0 +1,11 @@
+includes:
+    - /composer/vendor/nunomaduro/larastan/extension.neon
+    - /composer/vendor/phpstan/phpstan-mockery/extension.neon
+    - /composer/vendor/phpstan/phpstan-phpunit/extension.neon
+    - /composer/vendor/phpstan/phpstan-phpunit/rules.neon
+    - /composer/vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
